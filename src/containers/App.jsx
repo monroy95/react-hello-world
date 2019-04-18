@@ -1,6 +1,6 @@
 import React from "react";
-import "../assets/scss/App.scss"
-import img from "../assets/images/react.svg"
+import "../../public/assets/scss/App.scss"
+import img from "../../public/assets/images/react.svg"
 
 const App = () => (
     <div>

@@ -66,7 +66,11 @@ module.exports = {
             },
             canPrint: true
         }),
-        new FaviconsWebpackPlugin('./src/assets/images/react.svg'),
+        new FaviconsWebpackPlugin({
+            logo: './public/assets/images/react.svg',
+            prefix: './assets/images/icons/',
+            background: '#000'
+        }),
         new HtmlWebpackPlugin({
             template: './public/index.html',
             file: './index.html'
