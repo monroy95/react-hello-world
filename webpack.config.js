@@ -38,11 +38,11 @@ module.exports = {
             {
                 test: /\.(jpg|png|gif|woff|eot|ttf|svg)$/,
                 use: {
-                    loader: 'url-laoder',
+                    loader: 'url-loader',
                     options: {
                         fallback: 'file-loader',
-                        limit: 1000000,
-                        name: './assets/images/[name].[hash].[ext]'
+                        limit: 1000,
+                        name: './assets/images/[name].[ext]'
                     }
                 }
             }
