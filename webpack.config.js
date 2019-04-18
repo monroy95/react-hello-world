@@ -1,6 +1,7 @@
 const path = require('path');
 const extractTextPlugin = require('extract-text-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -65,6 +66,7 @@ module.exports = {
             },
             canPrint: true
         }),
+        new FaviconsWebpackPlugin('./src/assets/images/react.svg'),
         new HtmlWebpackPlugin({
             template: './public/index.html',
             file: './index.html'
