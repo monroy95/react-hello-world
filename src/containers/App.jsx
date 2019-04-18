@@ -5,7 +5,7 @@ import img from "../assets/images/react.svg"
 const App = () => (
     <div>
         <figure>
-            <img src={img} alt="React JS"/>
+            <img className="reactIcon" src={img} alt="React JS"/>
         </figure>
         <h1>Hola mundo cruel!</h1>
     </div>

@@ -1,6 +1,7 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const extractTextPlugin = require('extract-text-webpack-plugin');
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: {
@@ -56,6 +57,14 @@ module.exports = {
     },
     plugins: [
         new extractTextPlugin('./assets/css/[name].css'),
+        new OptimizeCssAssetsPlugin({
+            assetNameRegExp: /\.css$/,
+            cssProcessor: require('cssnano'),
+            cssProcessorPluginOptions: {
+                preset: ['default', {discardComments:{removeAll:true}}]
+            },
+            canPrint: true
+        }),
         new HtmlWebpackPlugin({
             template: './public/index.html',
             file: './index.html'
