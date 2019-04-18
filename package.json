@@ -1,23 +1,25 @@
 {
-  "name": "plantilla",
+  "name": "react-base-template",
   "version": "1.0.0",
-  "description": "Esta es una plantilla de React.",
+  "description": "This is a empty React Template.",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --open --config ./webpack.dev.config.js",
-    "dll": "webpack --config ./webpack.dll.config.js",
-    "build": "webpack --config ./webpack.config.js"
+    "dev": "webpack-dev-server --open --mode development",
+    "prod": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:whoisnegrello/react-hello-world.git"
   },
   "keywords": [
     "react",
     "template",
     "lunestudio"
   ],
-  "author": "Lunestudio",
+  "author": "Lucio Negrello <lucionegrello@yahoo.com.ar>",
   "license": "MIT",
   "dependencies": {
-    "node-sass": "^4.11.0",
-    "normalizr": "^3.3.0"
+    "node-sass": "^4.11.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",

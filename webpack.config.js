@@ -1,33 +1,25 @@
 const path = require('path');
-const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const extractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
     entry: {
-        home: path.resolve(__dirname, './src/index.js'),
-        otra: path.resolve(__dirname, './src/index.js')
+        home: path.resolve(__dirname, './src/index.js')
     },
     resolve: {
         extensions: ['.js', '.jsx']
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        publicPath: path.resolve(__dirname, 'dist') + '/',
         filename: './assets/js/[name].js',
-        chunkFilename: './assets/js/[id].[chunkhash].js'
+        chunkFilename: './assets/js/vendor.js'
     },
-    mode: 'production',
     module: {
         rules: [{
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 use: {
-                    loader: 'babel-loader',
-                    options: {
-                        presets: ['@babel/preset-env', '@babel/preset-react'],
-                        plugins: ['@babel/plugin-syntax-dynamic-import']
-                    }
+                    loader: 'babel-loader'
                 }
             },
             {
@@ -56,14 +48,17 @@ module.exports = {
             }
         ]
     },
+    optimization: {
+        splitChunks: {
+            chunks: 'all',
+            minChunks: 1
+        }
+    },
     plugins: [
         new extractTextPlugin('./assets/css/[name].css'),
         new HtmlWebpackPlugin({
             template: './public/index.html',
             file: './index.html'
-        }),
-        new webpack.DllReferencePlugin({
-            manifest: require('./modules-manifest.json')
         })
     ]
 }
