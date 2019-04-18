@@ -1,4 +1,4 @@
 # React Hello World Template
 Esta es una plantilla de prueba para repositorios públicos de GitHub en la que compilamos nuestra aplicación de React utilizando Travis. Al mismo tiempo el entorno de desarrollo está preparado con Webpack para compilar Sass, Imágenes y Fuentes. Por último, gracias a Babel, esta plantilla soporta las últimas actualizaciones de ECMA Script y JSX.
 
-[![Build Status](https://travis-ci.org/whoisnegrello/react-hello-world.svg?branch=dev)](https://travis-ci.org/whoisnegrello/react-hello-world)
+[![Build Status](https://travis-ci.org/whoisnegrello/react-hello-world.svg?branch=dev)](https://travis-ci.org/whoisnegrello/react-hello-world) [![Version](https://img.shields.io/badge/Version-1.0-blue.svg)](https://github.com/whoisnegrello/react-hello-world/tree/master) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-green.svg)](https://github.com/whoisnegrello/react-hello-world/pulls)
