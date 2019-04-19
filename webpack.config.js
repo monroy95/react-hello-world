@@ -75,8 +75,8 @@ module.exports = {
         // }),
         new AppManifestWebpackPlugin({
             logo: './public/assets/images/react.svg',
-            prefix: './assets/images/icons/', // default '/'
-            output: './assets/images/icons/', // default '/'. Can be absolute or relative
+            prefix: './assets/images/icons/icon-', // default '/'
+            output: './assets/images/icons/icon-', // default '/'. Can be absolute or relative
             emitStats: false,
             statsFilename: 'iconstats.json', // can be absolute path
             statsEncodeHtml: false,
