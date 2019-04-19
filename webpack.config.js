@@ -67,18 +67,21 @@ module.exports = {
             },
             canPrint: true
         }),
+        new HtmlWebpackPlugin({
+            template: './public/index.html',
+            file: './index.html'
+        }),
         // new FaviconsWebpackPlugin({
-        //     logo: './public/assets/images/react.svg',
-        //     prefix: './assets/images/icons/',
-        //     title: 'React Hello World',
-        //     background: '#000'
-        // }),
+            //     logo: './public/assets/images/react.svg',
+            //     prefix: './assets/images/icons/',
+            //     title: 'React Hello World',
+            //     background: '#000'
+            // }),
         new AppManifestWebpackPlugin({
             logo: './public/assets/images/react.svg',
-            prefix: './assets/images/icons/icon-', // default '/'
-            output: './assets/images/icons/icon-', // default '/'. Can be absolute or relative
+            prefix: './assets/images/icons/', // default '/'
+            output: './assets/images/icons/', // default '/'. Can be absolute or relative
             emitStats: false,
-            statsFilename: 'iconstats.json', // can be absolute path
             statsEncodeHtml: false,
             persistentCache: false,
             inject: true,
@@ -92,11 +95,8 @@ module.exports = {
                 display: 'standalone', // Android display: "browser" or "standalone". `string`
                 start_url: '/', // Android start application's URL. `string`
                 version: '1.0', // Your application's version number. `number`
+                path: './assets/images/icons/'
             }
-        }),
-        new HtmlWebpackPlugin({
-            template: './public/index.html',
-            file: './index.html'
         })
     ]
 }
