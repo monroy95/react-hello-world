@@ -87,7 +87,7 @@ module.exports = {
                 background: '#000', // Background colour for flattened icons. `string`
                 theme_color: '#fff', // Theme color for browser chrome. `string`
                 display: 'standalone', // Android display: "browser" or "standalone". `string`
-                start_url: '/', // Android start application's URL. `string`
+                start_url: '/react-hello-world/', // Android start application's URL. `string`
                 version: '1.0' // Your application's version number. `number`
             }
         })
