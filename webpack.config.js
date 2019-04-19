@@ -72,7 +72,7 @@ module.exports = {
         }),
         new AppManifestWebpackPlugin({
             logo: './public/assets/images/react.svg',
-            prefix: './assets/images/icons/', // default '/'
+            prefix: 'https://whoisnegrello.github.io/react-hello-world/assets/images/icons/', // default '/'
             output: './assets/images/icons/', // default '/'. Can be absolute or relative
             emitStats: false,
             statsEncodeHtml: false,
@@ -88,7 +88,6 @@ module.exports = {
                 theme_color: '#fff', // Theme color for browser chrome. `string`
                 display: 'standalone', // Android display: "browser" or "standalone". `string`
                 start_url: '/react-hello-world/', // Android start application's URL. `string`
-                scope: "/",
                 version: '1.0' // Your application's version number. `number`
             }
         })
