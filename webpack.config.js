@@ -93,7 +93,7 @@ module.exports = {
             }
         }),
         new GenerateSW({
-            swDest: './assets/js/service-worker.js',
+            swDest: './service-worker.js',
             importWorkboxFrom: 'cdn',
             include: [/\.html$/, /\.js$/, /\.css$/]
         })
