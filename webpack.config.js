@@ -94,7 +94,7 @@ module.exports = {
         }),
         new GenerateSW({
             swDest: './service-worker.js',
-            importWorkboxFrom: 'cdn',
+            importWorkboxFrom: 'disabled',
             include: [/\.html$/, /\.js$/, /\.css$/]
         })
     ]
