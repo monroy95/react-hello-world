@@ -1,14 +1,14 @@
 {
   "version": "1.0",
-  "name": "React Hello World",
-  "description": null,
+  "name": "React hello World",
+  "description": "Prueba de React Base",
   "icons": {
-    "60": "firefox_app_60x60.png",
-    "128": "firefox_app_128x128.png",
-    "512": "firefox_app_512x512.png"
+    "60": "assets/images/icons/firefox_app_60x60.png",
+    "128": "assets/images/icons/firefox_app_128x128.png",
+    "512": "assets/images/icons/firefox_app_512x512.png"
   },
   "developer": {
-    "name": null,
-    "url": null
+    "name": "Lucio Negrello",
+    "url": "https://lunestudio.com.ar/"
   }
 }
