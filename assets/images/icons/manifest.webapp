@@ -3,9 +3,9 @@
   "name": "React Hello World",
   "description": "Prueba de React Base",
   "icons": {
-    "60": "assets/images/icons/firefox_app_60x60.png",
-    "128": "assets/images/icons/firefox_app_128x128.png",
-    "512": "assets/images/icons/firefox_app_512x512.png"
+    "60": "https://whoisnegrello.github.io/react-hello-world/assets/images/icons/firefox_app_60x60.png",
+    "128": "https://whoisnegrello.github.io/react-hello-world/assets/images/icons/firefox_app_128x128.png",
+    "512": "https://whoisnegrello.github.io/react-hello-world/assets/images/icons/firefox_app_512x512.png"
   },
   "developer": {
     "name": "Lucio Negrello",
