@@ -6,7 +6,7 @@
   "lang": "en-US",
   "display": "standalone",
   "orientation": "any",
-  "start_url": ".",
+  "start_url": "https://whoisnegrello.github.io/react-hello-world/",
   "background_color": "#000",
   "icons": [
     {
