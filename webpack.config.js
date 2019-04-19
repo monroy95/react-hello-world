@@ -1,7 +1,6 @@
 const path = require('path');
 const extractTextPlugin = require('extract-text-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-//const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const AppManifestWebpackPlugin = require('app-manifest-webpack-plugin')
 
@@ -71,19 +70,14 @@ module.exports = {
             template: './public/index.html',
             file: './index.html'
         }),
-        // new FaviconsWebpackPlugin({
-            //     logo: './public/assets/images/react.svg',
-            //     prefix: './assets/images/icons/',
-            //     title: 'React Hello World',
-            //     background: '#000'
-            // }),
         new AppManifestWebpackPlugin({
             logo: './public/assets/images/react.svg',
             prefix: './assets/images/icons/', // default '/'
             output: './assets/images/icons/', // default '/'. Can be absolute or relative
             emitStats: false,
             statsEncodeHtml: false,
-            persistentCache: false,
+            statsFilename: 'iconstats.json',
+            persistentCache: true,
             inject: true,
             config: {
                 appName: 'React hello World', // Your application's name. `string`
@@ -94,8 +88,7 @@ module.exports = {
                 theme_color: '#fff', // Theme color for browser chrome. `string`
                 display: 'standalone', // Android display: "browser" or "standalone". `string`
                 start_url: '/', // Android start application's URL. `string`
-                version: '1.0', // Your application's version number. `number`
-                path: './assets/images/icons/'
+                version: '1.0' // Your application's version number. `number`
             }
         })
     ]
