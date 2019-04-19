@@ -80,7 +80,7 @@ module.exports = {
             persistentCache: true,
             inject: true,
             config: {
-                appName: 'React hello World', // Your application's name. `string`
+                appName: 'React Hello World', // Your application's name. `string`
                 appDescription: "Prueba de React Base", // Your application's description. `string`
                 developerName: "Lucio Negrello", // Your (or your developer's) name. `string`
                 developerURL: "https://lunestudio.com.ar/", // Your (or your developer's) URL. `string`
@@ -88,6 +88,7 @@ module.exports = {
                 theme_color: '#fff', // Theme color for browser chrome. `string`
                 display: 'standalone', // Android display: "browser" or "standalone". `string`
                 start_url: '/react-hello-world/', // Android start application's URL. `string`
+                scope: "/",
                 version: '1.0' // Your application's version number. `number`
             }
         })
