@@ -93,7 +93,9 @@ module.exports = {
             }
         }),
         new GenerateSW({
-            include: [/\.html$/, /\.js$/, /\.css$/]
+            swDest: './assets/js/service-worker.js',
+            include: [/\.html$/, /\.js$/, /\.css$/],
+            precacheManifestFilename: '/assets/js/wb-manifest.[manifestHash].js'
         })
     ]
 }
