@@ -1,8 +1,9 @@
 const path = require('path');
 const extractTextPlugin = require('extract-text-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+//const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const AppManifestWebpackPlugin = require('app-manifest-webpack-plugin')
 
 module.exports = {
     entry: {
@@ -66,11 +67,32 @@ module.exports = {
             },
             canPrint: true
         }),
-        new FaviconsWebpackPlugin({
+        // new FaviconsWebpackPlugin({
+        //     logo: './public/assets/images/react.svg',
+        //     prefix: './assets/images/icons/',
+        //     title: 'React Hello World',
+        //     background: '#000'
+        // }),
+        new AppManifestWebpackPlugin({
             logo: './public/assets/images/react.svg',
-            prefix: './assets/images/icons/',
-            title: 'React Hello World',
-            background: '#000'
+            prefix: './assets/images/icons/', // default '/'
+            output: './assets/images/icons/', // default '/'. Can be absolute or relative
+            emitStats: false,
+            statsFilename: 'iconstats.json', // can be absolute path
+            statsEncodeHtml: false,
+            persistentCache: false,
+            inject: true,
+            config: {
+                appName: 'React hello World', // Your application's name. `string`
+                appDescription: "Prueba de React Base", // Your application's description. `string`
+                developerName: "Lucio Negrello", // Your (or your developer's) name. `string`
+                developerURL: "https://lunestudio.com.ar/", // Your (or your developer's) URL. `string`
+                background: '#000', // Background colour for flattened icons. `string`
+                theme_color: '#fff', // Theme color for browser chrome. `string`
+                display: 'standalone', // Android display: "browser" or "standalone". `string`
+                start_url: '/', // Android start application's URL. `string`
+                version: '1.0', // Your application's version number. `number`
+            }
         }),
         new HtmlWebpackPlugin({
             template: './public/index.html',
