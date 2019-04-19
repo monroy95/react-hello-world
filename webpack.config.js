@@ -69,6 +69,7 @@ module.exports = {
         new FaviconsWebpackPlugin({
             logo: './public/assets/images/react.svg',
             prefix: './assets/images/icons/',
+            title: 'React Hello World',
             background: '#000'
         }),
         new HtmlWebpackPlugin({

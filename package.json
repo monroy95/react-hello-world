@@ -5,7 +5,7 @@
   "homepage": "https://whoisnegrello.github.io/react-hello-world/",
   "bugs": {
     "url": "https://github.com/whoisnegrello/react-hello-world/issues",
-    "email" : "lucionegrello@yahoo.com.ar"
+    "email": "lucionegrello@yahoo.com.ar"
   },
   "keywords": [
     "react",
@@ -24,7 +24,9 @@
     "url": "git@github.com:whoisnegrello/react-hello-world.git"
   },
   "dependencies": {
-    "node-sass": "^4.11.0"
+    "node-sass": "^4.11.0",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
