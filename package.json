@@ -2,6 +2,18 @@
   "name": "react-base-template",
   "version": "1.0.0",
   "description": "This is a empty React Template.",
+  "homepage": "https://whoisnegrello.github.io/react-hello-world/",
+  "bugs": {
+    "url": "https://github.com/whoisnegrello/react-hello-world/issues",
+    "email" : "lucionegrello@yahoo.com.ar"
+  },
+  "keywords": [
+    "react",
+    "template",
+    "lunestudio"
+  ],
+  "license": "MIT",
+  "author": "Lucio Negrello <lucionegrello@yahoo.com.ar>",
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --open --mode development",
@@ -11,13 +23,6 @@
     "type": "git",
     "url": "git@github.com:whoisnegrello/react-hello-world.git"
   },
-  "keywords": [
-    "react",
-    "template",
-    "lunestudio"
-  ],
-  "author": "Lucio Negrello <lucionegrello@yahoo.com.ar>",
-  "license": "MIT",
   "dependencies": {
     "node-sass": "^4.11.0"
   },
