@@ -2,7 +2,8 @@ const path = require('path');
 const extractTextPlugin = require('extract-text-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const AppManifestWebpackPlugin = require('app-manifest-webpack-plugin')
+const AppManifestWebpackPlugin = require('app-manifest-webpack-plugin');
+const {GenerateSW} = require('workbox-webpack-plugin');
 
 module.exports = {
     entry: {
@@ -90,6 +91,11 @@ module.exports = {
                 start_url: '/react-hello-world/', // Android start application's URL. `string`
                 version: '1.0' // Your application's version number. `number`
             }
+        }),
+        new GenerateSW({
+            swDest: './assets/js/service-worker.js',
+            importWorkboxFrom: 'cdn',
+            include: [/\.html$/, /\.js$/, /\.css$/]
         })
     ]
 }
