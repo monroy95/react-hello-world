@@ -85,16 +85,16 @@ module.exports = {
                 appDescription: "Prueba de React Base", // Your application's description. `string`
                 developerName: "Lucio Negrello", // Your (or your developer's) name. `string`
                 developerURL: "https://lunestudio.com.ar/", // Your (or your developer's) URL. `string`
-                background: '#000', // Background colour for flattened icons. `string`
-                theme_color: '#fff', // Theme color for browser chrome. `string`
+                background: '#fff', // Background colour for flattened icons. `string`
+                theme_color: '#000', // Theme color for browser chrome. `string`
                 display: 'standalone', // Android display: "browser" or "standalone". `string`
                 start_url: '/react-hello-world/', // Android start application's URL. `string`
-                scope: '/',
+                scope: '/react-hello-world/',
                 version: '1.0' // Your application's version number. `number`
             }
         }),
         new GenerateSW({
-            swDest: '/react-hello-world/service-worker.js',
+            swDest: 'service-worker.js',
             include: [/\.html$/, /\.js$/, /\.css$/],
             exclude: [/\.(?:png|jpg|jpeg|svg)$/],
             precacheManifestFilename: './assets/js/wb-manifest.[manifestHash].js',
