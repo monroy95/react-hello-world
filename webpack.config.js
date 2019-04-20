@@ -89,13 +89,37 @@ module.exports = {
                 theme_color: '#fff', // Theme color for browser chrome. `string`
                 display: 'standalone', // Android display: "browser" or "standalone". `string`
                 start_url: '/react-hello-world/', // Android start application's URL. `string`
+                scope: '/',
                 version: '1.0' // Your application's version number. `number`
             }
         }),
         new GenerateSW({
             swDest: 'service-worker.js',
             include: [/\.html$/, /\.js$/, /\.css$/],
-            precacheManifestFilename: './assets/js/wb-manifest.[manifestHash].js'
+            exclude: [/\.(?:png|jpg|jpeg|svg)$/],
+            precacheManifestFilename: './assets/js/wb-manifest.[manifestHash].js',
+            runtimeCaching: [
+                {
+                    urlPattern: /\.(?:html|js|css)$/,
+                    handler: 'staleWhileRevalidate',
+                    options: {
+                        cacheName: 'assets',
+                        expiration: {
+                            maxAgeSeconds: 2 * 60 * 60
+                        },
+                    },
+                },
+                {
+                    urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
+                    handler: 'CacheFirst',
+                    options: {
+                        cacheName: 'images',
+                        expiration: {
+                            maxAgeSeconds: 30 * 24 * 60 * 60
+                        },
+                    },
+                }
+            ]
         })
     ]
 }
