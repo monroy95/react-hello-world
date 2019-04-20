@@ -12,7 +12,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "./assets/js/vendor.js"
   },
   {
-    "revision": "643cbe065c97bc525de3b0f3d418857a",
+    "revision": "004ae91ad60f5758b5140b997bd73a9e",
     "url": "index.html"
   }
 ]);

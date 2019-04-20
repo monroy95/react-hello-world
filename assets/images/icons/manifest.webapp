@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "name": "React Hello World",
-  "description": "Prueba de React Base",
+  "description": "Testing App Manifest Webpack Plugin.",
   "icons": {
     "60": "https://whoisnegrello.github.io/react-hello-world/assets/images/icons/firefox_app_60x60.png",
     "128": "https://whoisnegrello.github.io/react-hello-world/assets/images/icons/firefox_app_128x128.png",

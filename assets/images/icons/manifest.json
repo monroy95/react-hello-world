@@ -1,7 +1,7 @@
 {
   "name": "React Hello World",
   "short_name": "React Hello World",
-  "description": "Prueba de React Base",
+  "description": "Testing App Manifest Webpack Plugin.",
   "dir": "auto",
   "lang": "en-US",
   "display": "standalone",

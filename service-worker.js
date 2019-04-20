@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.0/workbox-sw.js");
 
 importScripts(
-  "assets/js/wb-manifest.b203e0960566d7d283b78bea8ba7d54f.js"
+  "assets/js/wb-manifest.4428eb10f9ebfc753804944e67b9de15.js"
 );
 
 self.addEventListener('message', (event) => {
@@ -33,4 +33,4 @@ workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
 workbox.routing.registerRoute(/\.(?:html|js|css)$/, new workbox.strategies.StaleWhileRevalidate({ "cacheName":"assets", plugins: [new workbox.expiration.Plugin({ maxAgeSeconds: 7200, purgeOnQuotaError: false })] }), 'GET');
 workbox.routing.registerRoute(/\.(?:png|jpg|jpeg|svg)$/, new workbox.strategies.CacheFirst({ "cacheName":"images", plugins: [new workbox.expiration.Plugin({ maxAgeSeconds: 2592000, purgeOnQuotaError: false })] }), 'GET');
-workbox.routing.registerRoute(/^https?.*/, new workbox.strategies.NetworkFirst({ "cacheName":"default", plugins: [new workbox.expiration.Plugin({ maxAgeSeconds: 86400, purgeOnQuotaError: false })] }), 'GET');
+workbox.routing.registerRoute(/^https?.*/, new workbox.strategies.NetworkFirst({ "cacheName":"default", plugins: [new workbox.expiration.Plugin({ maxAgeSeconds: 7200, purgeOnQuotaError: false })] }), 'GET');
