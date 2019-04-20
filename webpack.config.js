@@ -7,7 +7,8 @@ const {GenerateSW} = require('workbox-webpack-plugin');
 
 module.exports = {
     entry: {
-        home: path.resolve(__dirname, './src/index.js')
+        "home": path.resolve(__dirname, './src/index.js'),
+        "load-service-worker": path.resolve(__dirname, './public/assets/js/load-service-worker.js')
     },
     resolve: {
         extensions: ['.js', '.jsx']
