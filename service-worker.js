@@ -30,3 +30,6 @@ self.addEventListener('message', (event) => {
  */
 self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
+
+workbox.routing.registerRoute(/\.(?:html|js|css)$/, new workbox.strategies.StaleWhileRevalidate({ "cacheName":"assets", plugins: [new workbox.expiration.Plugin({ maxAgeSeconds: 7200, purgeOnQuotaError: false })] }), 'GET');
+workbox.routing.registerRoute(/\.(?:png|jpg|jpeg|svg)$/, new workbox.strategies.CacheFirst({ "cacheName":"images", plugins: [new workbox.expiration.Plugin({ maxAgeSeconds: 2592000, purgeOnQuotaError: false })] }), 'GET');
