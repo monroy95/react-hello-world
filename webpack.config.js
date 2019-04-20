@@ -82,7 +82,7 @@ module.exports = {
             inject: true,
             config: {
                 appName: 'React Hello World', // Your application's name. `string`
-                appDescription: "Prueba de React Base", // Your application's description. `string`
+                appDescription: "Testing App Manifest Webpack Plugin.", // Your application's description. `string`
                 developerName: "Lucio Negrello", // Your (or your developer's) name. `string`
                 developerURL: "https://lunestudio.com.ar/", // Your (or your developer's) URL. `string`
                 background: '#fff', // Background colour for flattened icons. `string`
@@ -125,7 +125,7 @@ module.exports = {
                     options: {
                         cacheName: 'default',
                         expiration: {
-                            maxAgeSeconds: 24 * 60 * 60
+                            maxAgeSeconds: 2 * 60 * 60
                         },
                     },
                 }
