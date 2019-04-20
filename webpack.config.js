@@ -94,7 +94,7 @@ module.exports = {
             }
         }),
         new GenerateSW({
-            swDest: 'service-worker.js',
+            swDest: '/react-hello-world/service-worker.js',
             include: [/\.html$/, /\.js$/, /\.css$/],
             exclude: [/\.(?:png|jpg|jpeg|svg)$/],
             precacheManifestFilename: './assets/js/wb-manifest.[manifestHash].js',
@@ -116,6 +116,16 @@ module.exports = {
                         cacheName: 'images',
                         expiration: {
                             maxAgeSeconds: 30 * 24 * 60 * 60
+                        },
+                    },
+                },
+                {
+                    urlPattern: /^https?.*/,
+                    handler: 'networkFirst',
+                    options: {
+                        cacheName: 'default',
+                        expiration: {
+                            maxAgeSeconds: 24 * 60 * 60
                         },
                     },
                 }
