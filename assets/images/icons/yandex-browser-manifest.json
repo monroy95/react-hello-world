@@ -3,7 +3,7 @@
   "api_version": 1,
   "layout": {
     "logo": "https://whoisnegrello.github.io/react-hello-world/assets/images/icons/yandex-browser-50x50.png",
-    "color": "#000",
+    "color": "#fff",
     "show_title": true
   }
 }
