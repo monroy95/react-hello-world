@@ -25,7 +25,7 @@
     "url": "git@github.com:whoisnegrello/react-hello-world.git"
   },
   "dependencies": {
-    "node-sass": "^4.11.0",
+    "node-sass": "^4.13.1",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "workbox-webpack-plugin": "^4.3.0"
